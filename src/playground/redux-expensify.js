@@ -1,5 +1,6 @@
 import { createStore, combineReducers } from 'redux';
-import uuid from 'uuid';
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 
 // ADD_EXPENSE
 const addExpense = (
@@ -12,7 +13,7 @@ const addExpense = (
 ) => ({
     type: 'ADD_EXPENSE',
     expense: {
-        id: uuid(),
+        id: uuidv4(),
         description,
         note,
         amount,
